@@ -12,4 +12,5 @@ public interface CatalogServiceInterface {
     Product deleteProductById(int id);
     Product getProductByCode(String code);
     Product updateProductPrice(int id, Double price);
+
 }

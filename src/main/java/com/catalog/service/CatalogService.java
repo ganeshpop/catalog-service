@@ -3,6 +3,7 @@ package com.catalog.service;
 
 import com.catalog.bean.Product;
 import com.catalog.bean.ProductList;
+import com.catalog.exceptions.ProductNotFoundException;
 import com.catalog.persistence.CatalogDaoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,7 +44,9 @@ public class CatalogService implements CatalogServiceInterface {
     }
 
     @Override
-    public Product updateProductPrice(int id, Double  price) {
-        return catalogDao.updateProductPrice(id,price);
+    public Product updateProductPrice(int id, Double price) {
+        return catalogDao.updateProductPrice(id, price);
+
     }
+
 }
